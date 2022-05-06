@@ -8,11 +8,12 @@ def CDT(nombre: str, cantidad: int, meses: int):
 
                 vi = ((cantidad * porcentaje_interes * meses)/12)
                 vt = vi + cantidad
-                salida = "Para el usuario" + nombre + "la cantidad de dinero a recibir, según el monto inicial de" + meses + "meses es:" + vt
+                salida = "Para el usuario " + nombre + " la cantidad de dinero a recibir, según el monto inicial " + str(cantidad) + " para un tiempo de " + str(meses) + " meses es: " + str(vt)
                 return salida
                                 
         else:
                 vp = cantidad * porcentaje_a_perder
                 vt = cantidad - vp
-                return "Para el usuario", nombre, "la cantidad de dinero a recibir, según el monto inicial de", meses, "meses es:", vt
+                salida = "Para el usuario " + nombre + " la cantidad de dinero a recibir, según el monto inicial " + str(cantidad) + " para un tiempo de " + str(meses) + " meses es: " + str(vt)
+                return salida
 print(CDT(nombre, cantidad, meses))
